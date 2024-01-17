@@ -11,9 +11,11 @@ function App() {
       var fullString = document.getElementById("displayValueID").value;
       fullString = fullString.slice(0, -1);
       setCalculateValue(fullString);
-    } else if (buttonText == "ESC") {
+    } //ESC btn removes all the strings in display 
+    else if (buttonText == "ESC") {
       setCalculateValue("");
-    } else if (buttonText == "=") {
+    } //eval -> takes the strings and convert it to the mathematical expression
+    else if (buttonText == "=") {
       const result = eval(calculateValue);
       setCalculateValue(result);
     } //For Square Root Take 3 digits only after the decimal.
